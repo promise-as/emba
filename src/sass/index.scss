@@ -1,0 +1,263 @@
+$txt-color: #167e48;
+$bg-color: #3448a2;
+
+input[type="text"],
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none; // 去除safari浏览器的内阴影
+  &::-webkit-input-placeholder {
+    color: #999;
+    font-size: inherit;
+  }
+  &:-moz-placeholder {
+    color: #999;
+    font-size: inherit;
+  }
+  &::-moz-placeholder {
+    color: #999;
+    font-size: inherit;
+  }
+  &:-ms-input-placeholder {
+    color: #999;
+    font-size: inherit;
+  }
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+input, textarea, select {
+  background-color: transparent;
+  font-family: '微软雅黑';
+}
+
+select {
+  border: none;
+  text-indent: 1em;
+}
+
+option {
+  text-indent: 1em;
+  font-family: '微软雅黑';
+}
+
+input[type='text'], select {
+  border: none;
+  text-indent: 1em;
+}
+
+
+%one {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+%in-b {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+
+%clearfix {
+  zoom: 1;
+  &:after {
+    clear: both;
+  }
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+}
+
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 86px;
+  background-color: #ffffff;
+  .nuoda {
+    float: left;
+    margin-top: 16px;
+  }
+  .eu {
+    float: left;
+    color: #888888;
+    font-size: 24px;
+    border-left: 1px solid #aaaaaa;
+    margin-top: 31px;
+    margin-left: 20px;
+    padding-left: 20px;
+    line-height: 36px;
+  }
+  .header-r {
+    float: right;
+    .r-nav {
+      float: left;
+      margin-right: 42px;
+      margin-top: 35px;
+      a {
+        @extend %in-b;
+        float: left;
+        padding: 0 20px;
+        color: #333333;
+        font-size: 16px;
+        cursor: pointer;
+        &.active{
+          color: $bg-color;
+        }
+        &:hover {
+          color: $bg-color;
+        }
+      }
+    }
+    .tel {
+      float: right;
+      margin-top: 17px;
+      .icon {
+        float: left;
+        width: 52px;
+        height: 52px;
+        background: url("https://img.thea.cn/public/platform/thea/201907/hbj/EU-DBA/images/tel.png") no-repeat;
+        margin-right: 8px;
+      }
+      .text {
+        float: right;
+        text-align: left;
+        .hotline {
+          font-size: 14px;
+          color: #666666;
+        }
+        .number {
+          font-size: 24px;
+          color: #ef562f;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.nav{
+  height: 56px;
+  background-color: #576cc8;
+  position: relative;
+  .menu-bg{
+    width: 100%;
+    height: 56px;
+    background-color: #576cc8;
+    position: absolute;
+    top: 56px;
+    display: none;
+  }
+  .nav-menu{
+    position: relative;
+    .dropdown-btn{
+      @extend %in-b;
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      top: 15px;
+      background: url('../images/nav-menu-nor.png') no-repeat center;
+      &.sel{
+        background: url('../images/nav-menu-sel.png') no-repeat center;
+      }
+    }
+  }
+  ul{
+    @extend %clearfix;
+    
+    height: 56px;
+    overflow: hidden;
+    
+    li{
+      float: left;
+      &.active{
+        background-color: #3448a2;
+      }
+      a{
+        @extend %in-b;
+        line-height: 56px;
+        padding: 0 36px;
+        color: #fff;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.banner{
+  height: 450px;
+  background: url('../images/banner.png') no-repeat center;
+  padding-top: 335px;
+  box-sizing: border-box;
+  a{
+    display: block;
+    width: 230px;
+    height: 52px;
+    margin: 0 auto;
+    // border: 1px solid #000;
+  }
+}
+
+/* 标题模块 */
+.title-module{
+  text-align: center;
+  h2{
+    font-size: 36px;
+    line-height: 36px;
+    color: #333333;
+    margin-bottom: 16px;
+  }
+  .en{
+    font-size: 14px;
+    line-height: 14px;
+    color: #999999;
+    &::before, &::after{
+      @extend %in-b;
+      vertical-align: middle;
+      content: '';
+      width: 45px;
+      height: 1px;
+      background-color: #cccccc
+    }
+    &::before{
+      margin-right: 5px;
+    }
+    &::after{
+      margin-left: 5px;
+    }
+  }
+}
+
+/* 高管 */
+.executives{
+  padding-top: 80px;
+  .executives-cont{
+    padding-top: 60px;
+    ul{
+      @extend %clearfix;
+      margin-right: -40px;
+      margin-bottom: 40px;
+      li{
+        width: 270px;
+        height: 280px;
+        border: solid 1px #e3e3e3;
+        box-sizing: border-box;
+        float: left;
+        margin-right: 40px;
+      }
+    }
+    
+  }
+}
