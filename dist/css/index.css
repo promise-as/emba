@@ -871,7 +871,6 @@ select {
   border: solid 1px #eeeeee;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  float: left;
   margin-left: 20px;
 }
 
@@ -889,4 +888,11 @@ select {
   outline: none;
   border: none;
   cursor: pointer;
+}
+
+.footer-ad .sign-in select {
+  width: 200px;
+  margin-right: 10px;
+  line-height: 40px;
+  background: url("../images/select-icon.png") no-repeat 179px #fff;
 }
