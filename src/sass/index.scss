@@ -1,4 +1,4 @@
-$txt-color: #167e48;
+$txt-color: #f88531;
 $bg-color: #3448a2;
 
 input[type="text"],
@@ -7,19 +7,19 @@ select {
   -moz-appearance: none;
   -webkit-appearance: none; // 去除safari浏览器的内阴影
   &::-webkit-input-placeholder {
-    color: #999;
+    color: #888;
     font-size: inherit;
   }
   &:-moz-placeholder {
-    color: #999;
+    color: #888;
     font-size: inherit;
   }
   &::-moz-placeholder {
-    color: #999;
+    color: #888;
     font-size: inherit;
   }
   &:-ms-input-placeholder {
-    color: #999;
+    color: #888;
     font-size: inherit;
   }
 }
@@ -111,10 +111,10 @@ input[type='text'], select {
         font-size: 16px;
         cursor: pointer;
         &.active{
-          color: $bg-color;
+          color: $txt-color;
         }
         &:hover {
-          color: $bg-color;
+          color: $txt-color;
         }
       }
     }
@@ -146,6 +146,7 @@ input[type='text'], select {
 }
 
 .nav{
+  width: 100%;
   height: 56px;
   background-color: #576cc8;
   position: relative;
@@ -196,6 +197,7 @@ input[type='text'], select {
 }
 
 .banner{
+  width: 100%;
   height: 450px;
   background: url('../images/banner.png') no-repeat center;
   padding-top: 335px;
@@ -239,9 +241,35 @@ input[type='text'], select {
   }
 }
 
+/* 按钮模块 */
+.btn-module{
+  text-align: center;
+  a{
+    @extend %in-b;
+    width: 240px;
+    height: 48px;
+    border-radius: 24px;
+    line-height: 48px;
+    border: 1px solid #f88531;
+    color: #f88531;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 18px;
+    &:hover{
+      background-color: #f88531;
+      color: #fff;
+    }
+    &.active{
+      background-color: #f88531;
+      color: #fff;
+    }  
+  }
+}
+
 /* 高管 */
 .executives{
   padding-top: 80px;
+  margin-bottom: 80px;
   .executives-cont{
     padding-top: 60px;
     ul{
@@ -258,11 +286,10 @@ input[type='text'], select {
         margin-right: 40px;
         text-align: center;
         position: relative;
-        .img{
+        img{
           @extend %in-b;
           width: 130px;
           height: 130px;
-          border: 1px solid #cccccc;
         }
         .cont-title{
           font-size: 22px;
@@ -296,10 +323,501 @@ input[type='text'], select {
     }
     
   }
+
+  .btn-module{
+    a{
+      &.active{
+        margin-left: 40px;
+      }
+    }
+  }
 }
 
 /* 区别 */
 .difference{
-  height: 460px;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
   background: url('../images/bg_1.png') no-repeat center;
+  .wrap{
+    @extend %clearfix;
+  }
+  .difference-title{
+    float: left;
+    width: 267px;
+    .en-title{
+      font-size: 26px;
+      color: #fff;
+      line-height: 48px;
+      span{
+        font-size: 30px;
+      }
+      &::after{
+        @extend %in-b;
+        content: '';
+        width: 80px;
+        height: 5px;
+        background-color: #ffffff;
+      }
+    }
+    .cn-title{
+      font-size: 36px;
+      color: #fff;
+      line-height: 48px;
+      margin-bottom: 60px;
+      padding-top: 30px;
+      span{
+        font-size: 48px;
+        strong{
+          color: #ffe074;
+        }
+      }
+    }
+    .btn-module{
+      a{
+        display: block;
+        border: 1px solid #fff;
+        color: #fff;
+        &:hover{
+          border: 1px solid #f88531;
+        }
+        &.active{
+          margin-top: 20px;
+          border: 1px solid #f88531;
+        }
+      }
+    }
+  }
+  
+  .difference-cont{
+    float: right;
+    // width: 900px;
+    // height: 470px;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    .cont-col{
+      float: left;
+      box-sizing: border-box;
+      &:first-child{
+        width: 170px;
+      }
+      &:nth-of-type(2){
+        width: 360px;
+      }
+      &:nth-of-type(3){
+        width: 327px;
+      }
+    }
+    .thead{
+      @extend %clearfix;
+      background-color: #4b5eb5;
+      color: #fff;
+      font-size: 18px;
+      .cont-col{
+        height: 48px;
+        line-height: 48px;
+        &:nth-of-type(2){
+          background-color: #f88531;
+          border-left: 1px solid #fff;
+          border-right: 1px solid #fff;
+        }
+      }
+    }
+    .tbody{
+      .tbody-row{
+        &:last-child{
+          .cont-col{
+            border-bottom: none;
+          }
+        }
+      }
+      .cont-col{
+        height: 78px;
+        font-size: 14px;
+        color: #333333;
+        padding: 0 16px;
+        line-height: 24px;
+        padding-top: 14px;
+        box-sizing: border-box;
+        border-right: dashed 1px #aaaaaa;
+        border-bottom: dashed 1px #aaaaaa;
+        &:last-child{
+          border-right: none;
+        }
+        &.a-line{
+          line-height: 50px;
+        }
+      }
+    }
+  }
+}
+
+/* 名校 */
+.schools{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  .schools-cont{
+    width: 1140px;
+    // height: 410px;
+    background-color: #ffffff;
+    box-shadow: -7px 10px 0px 0px 
+      rgba(0, 0, 0, 0.16);
+    border-radius: 20px;
+    border: solid 1px #e1e1e1;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    position: relative;
+    .cont-detail{
+      width: 676px;
+      .detail-title{
+        background: url('../images/icon_5.png') no-repeat left;
+        padding-left: 43px;
+        font-size: 30px;
+        line-height: 48px;
+        color: #333333;
+      }
+      p{
+        font-size: 14px;
+        line-height: 24px;
+        color: #888888;
+      }
+      .detail-text{
+        padding-top: 30px;
+        .text-row{
+          @extend %clearfix;
+          font-size: 14px;
+          .row-key{
+            float: left;
+            height: 20px;
+            line-height: 20px;
+            background-color: #576cc8;
+            border-radius: 10px;
+            text-align: center;
+            color: #fff;
+            margin: 5px 10px 5px 0;
+            padding-left: 6px;
+          }
+          .row-val{
+            float: left;
+            width: 589px;
+            color: #333333;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+    .cont-btn{
+      @extend %in-b;
+      width: 260px;
+      height: 48px;
+      line-height: 48px;
+      font-size: 18px;
+      color: #fff;
+      position: absolute;
+      right: 0;
+      bottom: 40px;
+      padding-left: 83px;
+      box-sizing: border-box;
+      background: url('../images/icon_6.png') no-repeat 13px #f88531;
+      border-top-left-radius: 24px;
+      border-bottom-left-radius: 24px;
+    }
+    .schools-bg{
+      position: absolute;
+      top: -28px;
+      right: -60px;
+    }
+  }
+}
+
+/* 学位 */
+.degree{
+  // height: 780px;
+  padding-top: 60px;
+  background-color: #f4f4f4;
+  .degree-cont{
+    padding-top: 60px;
+    padding-bottom: 50px;
+    position: relative;
+    .cont-list{
+      @extend %clearfix;
+      margin-right: -40px;
+      margin-bottom: 20px;
+      li{
+        width: 270px;
+        float: left;
+        margin-right: 40px;
+        margin-bottom: 14px;
+        span{
+          @extend %in-b;
+          @extend %one;
+          width: 100%;
+          line-height: 48px;
+          font-size: 14px;
+          color: #333333;
+          text-align: center;
+        }
+      }
+    }
+    .btn-module{
+      a{
+        &.active{
+          width: 280px;
+        }
+      }
+    }
+  }
+  .detail-item{
+    width: 1140px;
+    // height: 410px;
+    background-color: #ffffff;
+    box-shadow: -7px 10px 0px 0px 
+      rgba(0, 0, 0, 0.16);
+    border-radius: 20px;
+    border: solid 1px #e1e1e1;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    display: none;
+    &.active{
+      display: block;
+    }
+    &:nth-of-type(n+5){
+      bottom: 380px;
+    }
+    .item-text{
+      // width: 943px;
+      .text-title{
+        background: url('../images/icon_5.png') no-repeat left;
+        padding-left: 43px;
+        font-size: 30px;
+        line-height: 48px;
+        color: #333333;
+      }
+      p{
+        width: 929px;
+        font-size: 14px;
+        line-height: 24px;
+        color: #888888;
+      }
+      .text{
+        padding-top: 20px;
+        .text-row{
+          @extend %clearfix;
+          font-size: 14px;
+          .row-key{
+            float: left;
+            height: 20px;
+            line-height: 20px;
+            background-color: #576cc8;
+            border-radius: 10px;
+            text-align: center;
+            color: #fff;
+            margin: 5px 10px 5px 0;
+            padding-left: 6px;
+          }
+          .row-val{
+            float: left;
+            // width: 589px;
+            color: #333333;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+    .item-btn{
+      @extend %in-b;
+      width: 180px;
+      height: 48px;
+      line-height: 48px;
+      font-size: 18px;
+      color: #fff;
+      position: absolute;
+      right: 0;
+      bottom: 40px;
+      padding-left: 67px;
+      box-sizing: border-box;
+      background: url('../images/icon_6.png') no-repeat 13px #f88531;
+      border-top-left-radius: 24px;
+      border-bottom-left-radius: 24px;
+    }
+    .schools-bg{
+      position: absolute;
+      top: 0;
+      right: 20px;
+    }
+  }
+}
+
+/* 预约 */
+.appointment{
+  padding-top: 80px;
+  .sign-in{
+    margin: 40px auto 60px;
+    width: 1130px;
+    // height: 140px;
+    background-color: #576cc8;
+    box-shadow: 1px 4px 16px 0px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 16px;
+    padding-top: 34px;
+    padding-bottom: 24px;
+    input{
+      width: 260px;
+      height: 48px;
+      line-height: 48px;
+      background-color: #fff;
+      margin-right: 20px;
+      
+    }
+    input[type='submit']{
+      margin-right: 0;
+      width: 200px;
+      font-size: 18px;
+      border: none;
+      background-color: $txt-color;
+      color: #fff;
+      border-radius: 24px;
+    }
+    select{
+      width: 260px;
+      margin-right: 20px;
+      line-height: 48px;
+      background: url('../images/select-icon.png') no-repeat 233px #fff;
+    }
+    .hint{
+      font-size: 14px;
+      line-height: 16px;
+      color: #fff;
+      padding-top: 20px;
+      span{
+       color: $txt-color;
+       font-size: 16px;
+      }
+    }
+  }
+}
+
+/* 报名 */
+.apply{
+  width: 100%;
+  height: 588px;
+  background: url('../images/apply-bg.png') no-repeat center;
+  .apply-btn{
+    @extend %in-b;
+    width: 180px;
+    height: 48px;
+    // border: 1px solid #000;
+    // margin-top: 405px;
+    margin-top: 420px;
+    margin-left: 342px;
+  }
+}
+
+#footer-div {
+  height: 100px;
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  background: #333333;
+  text-align: center;
+  font-size: 14px;
+  p{
+    color: rgba(250, 250, 250, 0.4);
+    a{
+      color: rgba(250, 250, 250, 0.4);
+      &:hover{
+        color: $txt-color;
+      }
+    }
+  }
+  .links {
+    margin: 3px 0 10px 0;
+    color: #ffffff;
+    a {
+      @extend %in-b;
+      line-height: 14px;
+      margin-left: 9px;
+      padding-right: 12px;
+      color: #ffffff;
+      border-right: 1px solid #5a5a5a;
+      margin-right: 0;
+      &:last-child {
+        border-right: 0;
+      }
+      &:hover{
+        color: $txt-color;
+      }
+    }
+  }
+}
+
+/* 广告占位 */
+.ad-site{
+  width: 100%;
+  height: 120px;
+  display: none;
+}
+.footer-ad{
+  width: 100%;
+  height: 120px;
+  background: url("../images/footer-ad.png") no-repeat center;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  // display: none;
+  .close{
+    display: block;
+    float: right;
+    width: 26px;
+    height: 26px;
+    background: url("../images/close.png") no-repeat center;
+    margin-top: 4px;
+    margin-right: -120px;
+    cursor: pointer;
+  }
+  @media (width: 1366px) {
+    .close{
+      margin-right: -70px;
+    }
+  }
+  .sign-in{
+    float: right;
+    margin-top: 40px;
+    input{
+      width: 260px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 16px;
+      background-color: #ffffff;
+      border: solid 1px #eeeeee;
+      box-sizing: border-box;
+      float: left;
+      margin-left: 20px;
+    }
+    input[type="text"]{
+      text-indent: 1rem;
+    }
+    input[type="submit"]{
+      width: 174px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      background-color: #fed760;
+      color: #f04a2f;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
 }

@@ -8,25 +8,25 @@ select {
 
 input[type="text"]::-webkit-input-placeholder,
 select::-webkit-input-placeholder {
-  color: #999;
+  color: #888;
   font-size: inherit;
 }
 
 input[type="text"]:-moz-placeholder,
 select:-moz-placeholder {
-  color: #999;
+  color: #888;
   font-size: inherit;
 }
 
 input[type="text"]::-moz-placeholder,
 select::-moz-placeholder {
-  color: #999;
+  color: #888;
   font-size: inherit;
 }
 
 input[type="text"]:-ms-input-placeholder,
 select:-ms-input-placeholder {
-  color: #999;
+  color: #888;
   font-size: inherit;
 }
 
@@ -58,21 +58,27 @@ select {
   text-indent: 1em;
 }
 
-.header .header-r .r-nav a, .nav .nav-menu .dropdown-btn, .nav ul li a, .title-module .en::before, .title-module .en::after, .executives .executives-cont ul li .img {
+.degree .degree-cont .cont-list li span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.header .header-r .r-nav a, .nav .nav-menu .dropdown-btn, .nav ul li a, .title-module .en::before, .title-module .en::after, .btn-module a, .executives .executives-cont ul li img, .difference .difference-title .en-title::after, .schools .schools-cont .cont-btn, .degree .degree-cont .cont-list li span, .degree .detail-item .item-btn, .apply .apply-btn, #footer-div .links a {
   display: inline-block;
   *zoom: 1;
   *display: inline;
 }
 
-.nav ul, .executives .executives-cont ul {
+.nav ul, .executives .executives-cont ul, .difference .wrap, .difference .difference-cont .thead, .schools .schools-cont .cont-detail .detail-text .text-row, .degree .degree-cont .cont-list, .degree .detail-item .item-text .text .text-row {
   zoom: 1;
 }
 
-.nav ul:after, .executives .executives-cont ul:after {
+.nav ul:after, .executives .executives-cont ul:after, .difference .wrap:after, .difference .difference-cont .thead:after, .schools .schools-cont .cont-detail .detail-text .text-row:after, .degree .degree-cont .cont-list:after, .degree .detail-item .item-text .text .text-row:after {
   clear: both;
 }
 
-.nav ul:before, .executives .executives-cont ul:before, .nav ul:after, .executives .executives-cont ul:after {
+.nav ul:before, .executives .executives-cont ul:before, .difference .wrap:before, .difference .difference-cont .thead:before, .schools .schools-cont .cont-detail .detail-text .text-row:before, .degree .degree-cont .cont-list:before, .degree .detail-item .item-text .text .text-row:before, .nav ul:after, .executives .executives-cont ul:after, .difference .wrap:after, .difference .difference-cont .thead:after, .schools .schools-cont .cont-detail .detail-text .text-row:after, .degree .degree-cont .cont-list:after, .degree .detail-item .item-text .text .text-row:after {
   content: "";
   display: table;
 }
@@ -122,11 +128,11 @@ select {
 }
 
 .header .header-r .r-nav a.active {
-  color: #3448a2;
+  color: #f88531;
 }
 
 .header .header-r .r-nav a:hover {
-  color: #3448a2;
+  color: #f88531;
 }
 
 .header .header-r .tel {
@@ -159,6 +165,7 @@ select {
 }
 
 .nav {
+  width: 100%;
   height: 56px;
   background-color: #576cc8;
   position: relative;
@@ -212,6 +219,7 @@ select {
 }
 
 .banner {
+  width: 100%;
   height: 450px;
   background: url("../images/banner.png") no-repeat center;
   padding-top: 335px;
@@ -260,9 +268,38 @@ select {
   margin-left: 5px;
 }
 
+/* 按钮模块 */
+.btn-module {
+  text-align: center;
+}
+
+.btn-module a {
+  width: 240px;
+  height: 48px;
+  border-radius: 24px;
+  line-height: 48px;
+  border: 1px solid #f88531;
+  color: #f88531;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  font-size: 18px;
+}
+
+.btn-module a:hover {
+  background-color: #f88531;
+  color: #fff;
+}
+
+.btn-module a.active {
+  background-color: #f88531;
+  color: #fff;
+}
+
 /* 高管 */
 .executives {
   padding-top: 80px;
+  margin-bottom: 80px;
 }
 
 .executives .executives-cont {
@@ -287,10 +324,9 @@ select {
   position: relative;
 }
 
-.executives .executives-cont ul li .img {
+.executives .executives-cont ul li img {
   width: 130px;
   height: 130px;
-  border: 1px solid #cccccc;
 }
 
 .executives .executives-cont ul li .cont-title {
@@ -324,8 +360,533 @@ select {
   text-align: left;
 }
 
+.executives .btn-module a.active {
+  margin-left: 40px;
+}
+
 /* 区别 */
 .difference {
-  height: 460px;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
   background: url("../images/bg_1.png") no-repeat center;
+}
+
+.difference .difference-title {
+  float: left;
+  width: 267px;
+}
+
+.difference .difference-title .en-title {
+  font-size: 26px;
+  color: #fff;
+  line-height: 48px;
+}
+
+.difference .difference-title .en-title span {
+  font-size: 30px;
+}
+
+.difference .difference-title .en-title::after {
+  content: '';
+  width: 80px;
+  height: 5px;
+  background-color: #ffffff;
+}
+
+.difference .difference-title .cn-title {
+  font-size: 36px;
+  color: #fff;
+  line-height: 48px;
+  margin-bottom: 60px;
+  padding-top: 30px;
+}
+
+.difference .difference-title .cn-title span {
+  font-size: 48px;
+}
+
+.difference .difference-title .cn-title span strong {
+  color: #ffe074;
+}
+
+.difference .difference-title .btn-module a {
+  display: block;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.difference .difference-title .btn-module a:hover {
+  border: 1px solid #f88531;
+}
+
+.difference .difference-title .btn-module a.active {
+  margin-top: 20px;
+  border: 1px solid #f88531;
+}
+
+.difference .difference-cont {
+  float: right;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.difference .difference-cont .cont-col {
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.difference .difference-cont .cont-col:first-child {
+  width: 170px;
+}
+
+.difference .difference-cont .cont-col:nth-of-type(2) {
+  width: 360px;
+}
+
+.difference .difference-cont .cont-col:nth-of-type(3) {
+  width: 327px;
+}
+
+.difference .difference-cont .thead {
+  background-color: #4b5eb5;
+  color: #fff;
+  font-size: 18px;
+}
+
+.difference .difference-cont .thead .cont-col {
+  height: 48px;
+  line-height: 48px;
+}
+
+.difference .difference-cont .thead .cont-col:nth-of-type(2) {
+  background-color: #f88531;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.difference .difference-cont .tbody .tbody-row:last-child .cont-col {
+  border-bottom: none;
+}
+
+.difference .difference-cont .tbody .cont-col {
+  height: 78px;
+  font-size: 14px;
+  color: #333333;
+  padding: 0 16px;
+  line-height: 24px;
+  padding-top: 14px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-right: dashed 1px #aaaaaa;
+  border-bottom: dashed 1px #aaaaaa;
+}
+
+.difference .difference-cont .tbody .cont-col:last-child {
+  border-right: none;
+}
+
+.difference .difference-cont .tbody .cont-col.a-line {
+  line-height: 50px;
+}
+
+/* 名校 */
+.schools {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.schools .schools-cont {
+  width: 1140px;
+  background-color: #ffffff;
+  -webkit-box-shadow: -7px 10px 0px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: -7px 10px 0px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 20px;
+  border: solid 1px #e1e1e1;
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-bottom: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+.schools .schools-cont .cont-detail {
+  width: 676px;
+}
+
+.schools .schools-cont .cont-detail .detail-title {
+  background: url("../images/icon_5.png") no-repeat left;
+  padding-left: 43px;
+  font-size: 30px;
+  line-height: 48px;
+  color: #333333;
+}
+
+.schools .schools-cont .cont-detail p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #888888;
+}
+
+.schools .schools-cont .cont-detail .detail-text {
+  padding-top: 30px;
+}
+
+.schools .schools-cont .cont-detail .detail-text .text-row {
+  font-size: 14px;
+}
+
+.schools .schools-cont .cont-detail .detail-text .text-row .row-key {
+  float: left;
+  height: 20px;
+  line-height: 20px;
+  background-color: #576cc8;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  margin: 5px 10px 5px 0;
+  padding-left: 6px;
+}
+
+.schools .schools-cont .cont-detail .detail-text .text-row .row-val {
+  float: left;
+  width: 589px;
+  color: #333333;
+  line-height: 30px;
+}
+
+.schools .schools-cont .cont-btn {
+  width: 260px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 18px;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  padding-left: 83px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: url("../images/icon_6.png") no-repeat 13px #f88531;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+}
+
+.schools .schools-cont .schools-bg {
+  position: absolute;
+  top: -28px;
+  right: -60px;
+}
+
+/* 学位 */
+.degree {
+  padding-top: 60px;
+  background-color: #f4f4f4;
+}
+
+.degree .degree-cont {
+  padding-top: 60px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.degree .degree-cont .cont-list {
+  margin-right: -40px;
+  margin-bottom: 20px;
+}
+
+.degree .degree-cont .cont-list li {
+  width: 270px;
+  float: left;
+  margin-right: 40px;
+  margin-bottom: 14px;
+}
+
+.degree .degree-cont .cont-list li span {
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  color: #333333;
+  text-align: center;
+}
+
+.degree .degree-cont .btn-module a.active {
+  width: 280px;
+}
+
+.degree .detail-item {
+  width: 1140px;
+  background-color: #ffffff;
+  -webkit-box-shadow: -7px 10px 0px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: -7px 10px 0px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 20px;
+  border: solid 1px #e1e1e1;
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-bottom: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  display: none;
+}
+
+.degree .detail-item.active {
+  display: block;
+}
+
+.degree .detail-item:nth-of-type(n+5) {
+  bottom: 380px;
+}
+
+.degree .detail-item .item-text .text-title {
+  background: url("../images/icon_5.png") no-repeat left;
+  padding-left: 43px;
+  font-size: 30px;
+  line-height: 48px;
+  color: #333333;
+}
+
+.degree .detail-item .item-text p {
+  width: 929px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #888888;
+}
+
+.degree .detail-item .item-text .text {
+  padding-top: 20px;
+}
+
+.degree .detail-item .item-text .text .text-row {
+  font-size: 14px;
+}
+
+.degree .detail-item .item-text .text .text-row .row-key {
+  float: left;
+  height: 20px;
+  line-height: 20px;
+  background-color: #576cc8;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  margin: 5px 10px 5px 0;
+  padding-left: 6px;
+}
+
+.degree .detail-item .item-text .text .text-row .row-val {
+  float: left;
+  color: #333333;
+  line-height: 30px;
+}
+
+.degree .detail-item .item-btn {
+  width: 180px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 18px;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  padding-left: 67px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: url("../images/icon_6.png") no-repeat 13px #f88531;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+}
+
+.degree .detail-item .schools-bg {
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+/* 预约 */
+.appointment {
+  padding-top: 80px;
+}
+
+.appointment .sign-in {
+  margin: 40px auto 60px;
+  width: 1130px;
+  background-color: #576cc8;
+  -webkit-box-shadow: 1px 4px 16px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 4px 16px 0px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 16px;
+  padding-top: 34px;
+  padding-bottom: 24px;
+}
+
+.appointment .sign-in input {
+  width: 260px;
+  height: 48px;
+  line-height: 48px;
+  background-color: #fff;
+  margin-right: 20px;
+}
+
+.appointment .sign-in input[type='submit'] {
+  margin-right: 0;
+  width: 200px;
+  font-size: 18px;
+  border: none;
+  background-color: #f88531;
+  color: #fff;
+  border-radius: 24px;
+}
+
+.appointment .sign-in select {
+  width: 260px;
+  margin-right: 20px;
+  line-height: 48px;
+  background: url("../images/select-icon.png") no-repeat 233px #fff;
+}
+
+.appointment .sign-in .hint {
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  padding-top: 20px;
+}
+
+.appointment .sign-in .hint span {
+  color: #f88531;
+  font-size: 16px;
+}
+
+/* 报名 */
+.apply {
+  width: 100%;
+  height: 588px;
+  background: url("../images/apply-bg.png") no-repeat center;
+}
+
+.apply .apply-btn {
+  width: 180px;
+  height: 48px;
+  margin-top: 420px;
+  margin-left: 342px;
+}
+
+#footer-div {
+  height: 100px;
+  width: 100%;
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #333333;
+  text-align: center;
+  font-size: 14px;
+}
+
+#footer-div p {
+  color: rgba(250, 250, 250, 0.4);
+}
+
+#footer-div p a {
+  color: rgba(250, 250, 250, 0.4);
+}
+
+#footer-div p a:hover {
+  color: #f88531;
+}
+
+#footer-div .links {
+  margin: 3px 0 10px 0;
+  color: #ffffff;
+}
+
+#footer-div .links a {
+  line-height: 14px;
+  margin-left: 9px;
+  padding-right: 12px;
+  color: #ffffff;
+  border-right: 1px solid #5a5a5a;
+  margin-right: 0;
+}
+
+#footer-div .links a:last-child {
+  border-right: 0;
+}
+
+#footer-div .links a:hover {
+  color: #f88531;
+}
+
+/* 广告占位 */
+.ad-site {
+  width: 100%;
+  height: 120px;
+  display: none;
+}
+
+.footer-ad {
+  width: 100%;
+  height: 120px;
+  background: url("../images/footer-ad.png") no-repeat center;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+}
+
+.footer-ad .close {
+  display: block;
+  float: right;
+  width: 26px;
+  height: 26px;
+  background: url("../images/close.png") no-repeat center;
+  margin-top: 4px;
+  margin-right: -120px;
+  cursor: pointer;
+}
+
+@media (width: 1366px) {
+  .footer-ad .close {
+    margin-right: -70px;
+  }
+}
+
+.footer-ad .sign-in {
+  float: right;
+  margin-top: 40px;
+}
+
+.footer-ad .sign-in input {
+  width: 260px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  background-color: #ffffff;
+  border: solid 1px #eeeeee;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+  margin-left: 20px;
+}
+
+.footer-ad .sign-in input[type="text"] {
+  text-indent: 1rem;
+}
+
+.footer-ad .sign-in input[type="submit"] {
+  width: 174px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #fed760;
+  color: #f04a2f;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
