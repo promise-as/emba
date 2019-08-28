@@ -763,10 +763,10 @@ input[type='text'], select {
 }
 
 /* 广告占位 */
-.ad-site{
+.footer-ad-site{
   width: 100%;
   height: 120px;
-  display: none;
+  // display: none;
 }
 .footer-ad{
   width: 100%;
@@ -795,7 +795,7 @@ input[type='text'], select {
     float: right;
     margin-top: 40px;
     input{
-      width: 260px;
+      width: 200px;
       height: 40px;
       line-height: 40px;
       font-size: 16px;
@@ -803,7 +803,7 @@ input[type='text'], select {
       border: solid 1px #eeeeee;
       box-sizing: border-box;
       // float: left;
-      margin-left: 20px;
+      margin-left: 10px;
     }
     input[type="text"]{
       text-indent: 1rem;
@@ -821,9 +821,334 @@ input[type='text'], select {
     }
     select{
       width: 200px;
-      margin-right: 10px;
       line-height: 40px;
       background: url('../images/select-icon.png') no-repeat 179px #fff;
+    }
+  }
+}
+
+/* 右侧悬浮 */
+.right-nav {
+  z-index: 99;
+  width: 70px;
+  border-bottom: none;
+  position: fixed;
+  right: 40px;
+  top: 30%;
+  // top: 10%;
+  ul {
+    li {
+      position: relative;
+      width: 80px;
+      // height: 80px;
+      background-color: #ffffff;
+      &:last-child{
+        a{
+          border-bottom: 1px solid #ddd;
+        }
+      }
+      a {
+        display: block;
+        height: 80px;
+        text-align: center;
+        line-height: 20px;
+        color: #333333;
+        padding-top: 12px;
+        box-sizing: border-box;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-bottom: none;
+        
+        span{
+          @extend %in-b;
+        }
+        .education{
+          @extend %in-b;
+          width: 32px;
+          height: 30px;
+          background: url("../images/education-nor.png") no-repeat;
+        }
+        .enroll{
+          @extend %in-b;
+          width: 30px;
+          height: 31px;
+          background: url("../images/enroll-nor.png") no-repeat;
+        }
+        .tuition{
+          @extend %in-b;
+          width: 30px;
+          height: 30px;
+          background: url("../images/tuition-nor.png") no-repeat;
+        }
+        .audition{
+          @extend %in-b;
+          width: 30px;
+          height: 30px;
+          background: url("../images/audition-nor.png") no-repeat;
+        }
+        .consult{
+          @extend %in-b;
+          width: 30px;
+          height: 31px;
+          background: url("../images/consult-nor.png") no-repeat;
+        }
+
+        &:hover{
+          background-color: $txt-color;
+          color: #ffffff;
+          border: 1px solid $txt-color;
+          .education{
+            background: url("../images/education-sel.png") no-repeat;
+          }
+          .enroll{
+            background: url("../images/enroll-sel.png") no-repeat;
+          }
+          .tuition{
+            background: url("../images/tuition-sel.png") no-repeat;
+          }
+          .audition{
+            background: url("../images/audition-sel.png") no-repeat;
+          }
+          .consult{
+            background: url("../images/consult-sel.png") no-repeat;
+          }
+        }
+      }
+      .hide-content{
+        display: none;
+        width: 200px;
+        height: 80px;
+        line-height: 80px;
+        background-color: $txt-color;
+        font-size: 22px;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        position: absolute;
+        top: 0;
+        right: 81px;
+      }
+    }
+  }
+}
+
+/* 800弹窗 */
+.invite-popup{
+  width: 540px;
+  height: 480px;
+  background: url("../images/invite-popup.png") no-repeat top;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 300;
+  display: none;
+  .close{
+    display: block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  .invite-title{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 80px;
+    color: #ffffff;
+    padding-left: 40px;
+  }
+  .invite-data{
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 13px 0px 
+		rgba(0, 0, 0, 0.83);
+    border-left: 2px solid #879aef;
+    border-right: 2px solid #879aef;
+    border-bottom: 2px solid #879aef;
+    padding-top: 36px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    ul {
+      box-sizing: border-box;
+      li {
+        @extend %clearfix;
+        .icon{
+          display: block;
+          width: 14px;
+          height: 12px;
+          background: url("https://img.thea.cn/public/platform/thea/201906/hbj/form-popup/images/invite-popup-icon.png") no-repeat;
+          background-size: 100% 100%;
+          margin-right: 7px;
+          float: left;
+        }
+        .detail{
+          width: 470px;
+          float: left;
+          color: #333333;
+          p {
+            font-size: 16px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            font-weight: bold;
+          }
+          span {
+            display: block;
+            float: left;
+            min-width: 116px;
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 22px;
+            padding-right: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            height: 14px;
+            line-height: 14px;
+            box-sizing: border-box;
+            &:before {
+              content: "";
+              width: 16px;
+              height: 16px;
+              position: absolute;
+              left: 0;
+              top: 0;
+              border-radius: 100%;
+              background-color: #fff;
+              border: 1px solid #999999;
+              box-sizing: border-box;
+              vertical-align: text-top;
+            }
+            &:after{
+              content: "";
+              width: 10px;
+              height: 10px;
+              position: absolute;
+              top: 3px;
+              left: 3px;
+              border-radius: 100%;
+            }
+            &.active{
+              &:before {
+                border: 1px solid #999999;
+              }
+              &:after{
+                background-color: #d92912;
+              }
+            }
+          }
+        }
+      }
+    }
+    .invite-form {
+      @extend %clearfix;
+      input {
+        float: left;
+        width: 280px;
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid #bbbbbb;
+        box-sizing: border-box;
+        border-radius: 8px;
+        font-size: 14px;
+        outline: none;
+        margin-right: 10px;
+        background-color: #ffffff;
+        &.user-tel{
+          background: url("https://img.thea.cn/public/platform/thea/201906/hbj/form-popup/images/star.png") no-repeat 5% center;
+          text-indent: 2em;
+        }
+      }
+      .submit{
+        width: 169px;
+        height: 40px;
+        background-color: $txt-color;
+        border-radius: 8px;
+        border: none;
+        margin-right: 0;
+        color: #ffffff;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* 预约弹窗 */
+.appoint-popup{
+  width: 560px;
+	height: 354px;
+  background: url("../images/appoint-popup.png") no-repeat top;
+  padding: 114px 40px 16px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 300;
+  display: none;
+  .close{
+    display: block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  .appoint-form {
+    background-color: rgba(255, 255, 255, 0.96);
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    select{
+      width: 100%;
+      height: 42px;
+      line-height: 42px;
+      border-radius: 6px;
+      border: solid 1px #bbbbbb;
+      outline: none;
+      margin-bottom: 12px;
+    }
+    input {
+      @extend %in-b;
+      width: 209px;
+      height: 42px;
+      line-height: 42px;
+      border: 1px solid #bbbbbb;
+      box-sizing: border-box;
+      border-radius: 8px;
+      outline: none;
+      background-color: #ffffff;
+      &:nth-of-type(1){
+        margin-right: 16px;
+      }
+    }
+    .submit{
+      width: 100%;
+      height: 42px;
+      background-color: $txt-color;
+      border-radius: 8px;
+      border: none;
+      margin-right: 0;
+      color: #ffffff;
+      cursor: pointer;
+      margin-top: 16px;
+    }
+    .form-hint{
+      font-size: 14px;
+      line-height: 14px;
+      color: #999999;
+      text-align: center;
+      margin-top: 16px;
+      span{
+        color: #f24d14;
+      }
     }
   }
 }

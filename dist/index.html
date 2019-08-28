@@ -568,7 +568,7 @@
   </div>
 
   <!-- 广告占位 -->
-  <div class="ad-site"></div>
+  <div class="footer-ad-site"></div>
   <div class="footer-ad">
     <div class="wrap">
       <i class="close"></i>
@@ -585,6 +585,174 @@
         <input type="submit" value="立即获取">
       </form>
     </div>
+  </div>
+
+  <!-- 右侧悬浮 -->
+  <div class="right-nav">
+    <ul>  
+      <li>
+        <a href="javascript:;">
+          <i class="education"></i>
+          <span>学历要求</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <i class="enroll"></i>
+          <span>报读条件</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <i class="tuition"></i>
+          <span>学费资讯</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <i class="audition"></i>
+          <span>免费试听</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <i class="consult"></i>
+          <span>电话咨询</span>
+        </a>
+        <div class="hide-content">13727629617</div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 800弹窗 -->
+  <div class="invite-popup">
+    <i class="close"></i>
+    <div class="invite-title">智能测评你能考哪所院校在职研究生？</div>
+    <div class="invite-data">
+      <ul>
+        <li>
+          <i class="icon"></i>
+          <div class="detail">
+            <p>您的最高学历？</p>
+            <span class="active">专科以下</span>
+            <span>专科</span>
+            <span>本科</span>
+            <span>本科及以上</span>
+            <input type="hidden" class="user-con" value="专科以下">
+          </div>
+  
+        </li>
+        <li>
+          <i class="icon"></i>
+          <div class="detail">
+            <p>您的年龄？</p>
+            <span class="active">18-23岁</span>
+            <span>24-30岁</span>
+            <span>31-45岁</span>
+            <span>45岁以上</span>
+            <input type="hidden" class="user-con" value="18-23岁">
+          </div>
+        </li>
+        <li>
+          <i class="icon"></i>
+          <div class="detail">
+            <p>您从事的职业？</p>
+            <span class="active">金融行业</span>
+            <span>互联网行业</span>
+            <span>财务相关</span>
+            <span>通信行业</span>
+            <span>国企/公务员/老师</span>
+            <span>其他</span>
+            <input type="hidden" class="user-con" value="金融行业">
+          </div>
+        </li>
+        <li>
+          <i class="icon"></i>
+          <div class="detail">
+            <p>学习目的</p>
+            <span class="active">工作需求</span>
+            <span>管理经验</span>
+            <span>自我提升</span>
+            <span>人脉拓展</span>
+            <input type="hidden" class="user-con" value="工作需求">
+          </div>
+  
+        </li>
+        <form class="invite-form">
+          <input type="hidden" class="user-name" value="佚名" placeholder="">
+          <input type="text" class="user-tel" placeholder="请输入您的手机号/微信号">
+          <input type="hidden" id="inviteData" class="user-con"
+                 value=" 、高中（中专、职校、技校）及以下、应届毕业生、国有企业、总监、全日制研究生、学历学位">
+          <input class="submit" type="submit" value="获取结果">
+        </form>
+        <script type="text/javascript" src="https://img.thea.cn/public/js/thea.ms.form.js"></script>
+        <script type="text/javascript">
+          // dataWrap: 数据容器, submitData: 提交的数据, mergeData: 合并数据
+          function radioChoice(dataWrap, submitData) {
+            dataWrap.find('li span').click(function () {
+              var aimEle = $(this);
+              aimEle.addClass('active').siblings().removeClass('active');
+              aimEle.parent().find('.user-con').each(function () {
+                $(this).val($(this).siblings('.active').html());
+              });
+              var mergeData = '';
+              for (var n = 0; n < dataWrap.find('li').length; n++) {
+                mergeData += dataWrap.find('li').eq(n).find('.active').text() + '、';
+              }
+              submitData.val(mergeData);
+            });
+          }
+          radioChoice($('.invite-data'), $('#inviteData'));
+          // ele: 目标元素, c: 关闭按钮, f: 第一次是多少毫秒显示,
+          // a: 第二次是第一次之后多少毫秒显示, n: 一共显示多少次,
+          function popupHandle(ele, c, f, a, n) {
+            var $par = $(ele);
+            var $num = 1;
+            popupTc(f);
+            $(c).click(function () {
+              $par.hide();
+              if ($num < n) {
+                popupTc(a);
+              }
+              $num++;
+            });
+  
+            function popupTc(d) {
+              setTimeout(function () {
+                $par.fadeIn(300);
+              }, d);
+            }
+          }
+          // popupHandle('.invite-popup', '.invite-popup .close', 30000, 40000, 2);
+          // theaMsForm($('.invite-form'));
+        </script>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 预约弹窗 -->
+  <div class="appoint-popup">
+    <i class="close"></i>
+    <form class="appoint-form">
+      <select name="" id="">
+        <option value="">请选择您要查询的院校</option>
+        <option value="">复旦大学EMBA</option>
+        <option value="">比利时列日EMBA</option>
+        <option value="">SDA博科尼EMBA</option>
+        <option value="">英国阿伯丁大学EMBA</option>
+        <option value="">法国蒙彼利埃大学EMBA</option>
+        <option value="">美国北阿拉巴马大学EMBA</option>
+        <option value="">法国ISTEC高等商学院EMBA</option>
+        <option value="">美国林肯大学</option>
+        <option value="">法国里昂商学院-北京邮电大学全球EMBA</option>
+      </select>
+      <input type="text" class="user-name" placeholder="请输入您的姓名">
+      <input type="text" class="user-tel" placeholder="请输入您的电话">
+      <input class="submit" type="submit" value="立即预约">
+      <div class="form-hint">
+          <span>* </span>预约成功后，我们将电话通知您试听课的时间，请保持电话畅通
+        </div>
+    </form>
   </div>
 
   <script src="js/index.js"></script>   
