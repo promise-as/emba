@@ -44,7 +44,6 @@ input, textarea, select {
 
 select {
   border: none;
-  text-indent: 1em;
 }
 
 option {
@@ -52,8 +51,7 @@ option {
   font-family: '微软雅黑';
 }
 
-input[type="text"],
-select {
+input[type='text'] {
   border: none;
   text-indent: 1em;
 }
@@ -751,6 +749,16 @@ select {
   margin-right: 20px;
   line-height: 48px;
   background: url("../images/select-icon.png") no-repeat 233px #fff;
+  padding: 0 16px;
+  color: #888888;
+}
+
+.appointment .sign-in select option {
+  color: #333333;
+}
+
+.appointment .sign-in select option:first-child {
+  color: #888888;
 }
 
 .appointment .sign-in .hint {
@@ -768,15 +776,16 @@ select {
 /* 报名 */
 .apply {
   width: 100%;
-  height: 588px;
   background: url("../images/apply-bg.png") no-repeat center;
 }
 
 .apply .apply-btn {
   width: 180px;
   height: 48px;
-  margin-top: 420px;
+  line-height: 48px;
+  margin-top: 405px;
   margin-left: 342px;
+  margin-bottom: 102px;
 }
 
 #footer-div {
@@ -828,6 +837,7 @@ select {
 .footer-ad-site {
   width: 100%;
   height: 120px;
+  display: none;
 }
 
 .footer-ad {
@@ -837,6 +847,7 @@ select {
   position: fixed;
   bottom: 0;
   z-index: 100;
+  display: none;
 }
 
 .footer-ad .close {
@@ -865,7 +876,7 @@ select {
   width: 200px;
   height: 40px;
   line-height: 40px;
-  font-size: 16px;
+  font-size: 14px;
   background-color: #ffffff;
   border: solid 1px #eeeeee;
   -webkit-box-sizing: border-box;
@@ -893,6 +904,16 @@ select {
   width: 200px;
   line-height: 40px;
   background: url("../images/select-icon.png") no-repeat 179px #fff;
+  padding: 0 14px;
+  color: #888888;
+}
+
+.footer-ad .sign-in select option {
+  color: #333333;
+}
+
+.footer-ad .sign-in select option:first-child {
+  color: #888888;
 }
 
 /* 右侧悬浮 */
@@ -1158,7 +1179,7 @@ select {
   cursor: pointer;
 }
 
-/* 预约弹窗 */
+/* 预约试听弹窗 */
 .appoint-popup {
   width: 560px;
   height: 354px;
@@ -1201,6 +1222,17 @@ select {
   border: solid 1px #bbbbbb;
   outline: none;
   margin-bottom: 12px;
+  padding: 0 16px;
+  color: #888888;
+  background: url("../images/select-icon.png") no-repeat 402px center;
+}
+
+.appoint-popup .appoint-form select option {
+  color: #000;
+}
+
+.appoint-popup .appoint-form select option:first-child {
+  color: #888888;
 }
 
 .appoint-popup .appoint-form input {

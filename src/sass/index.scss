@@ -38,7 +38,6 @@ input, textarea, select {
 
 select {
   border: none;
-  text-indent: 1em;
 }
 
 option {
@@ -46,7 +45,7 @@ option {
   font-family: '微软雅黑';
 }
 
-input[type='text'], select {
+input[type='text'] {
   border: none;
   text-indent: 1em;
 }
@@ -199,7 +198,6 @@ input[type='text'], select {
 .banner{
   width: 100%;
   height: 450px;
-  background: url('../images/banner.png') no-repeat center;
   padding-top: 335px;
   box-sizing: border-box;
   a{
@@ -694,6 +692,14 @@ input[type='text'], select {
       margin-right: 20px;
       line-height: 48px;
       background: url('../images/select-icon.png') no-repeat 233px #fff;
+      padding: 0 16px;
+      color: #888888;
+      option{
+        color: #333333;
+        &:first-child{
+          color: #888888;
+        }
+      }
     }
     .hint{
       font-size: 14px;
@@ -711,16 +717,16 @@ input[type='text'], select {
 /* 报名 */
 .apply{
   width: 100%;
-  height: 588px;
+  //height: 588px;
   background: url('../images/apply-bg.png') no-repeat center;
   .apply-btn{
     @extend %in-b;
     width: 180px;
     height: 48px;
-    // border: 1px solid #000;
-    // margin-top: 405px;
-    margin-top: 420px;
+    line-height: 48px;
+    margin-top: 405px;
     margin-left: 342px;
+    margin-bottom: 102px;
   }
 }
 
@@ -766,7 +772,7 @@ input[type='text'], select {
 .footer-ad-site{
   width: 100%;
   height: 120px;
-  // display: none;
+   display: none;
 }
 .footer-ad{
   width: 100%;
@@ -775,7 +781,7 @@ input[type='text'], select {
   position: fixed;
   bottom: 0;
   z-index: 100;
-  // display: none;
+   display: none;
   .close{
     display: block;
     float: right;
@@ -798,7 +804,7 @@ input[type='text'], select {
       width: 200px;
       height: 40px;
       line-height: 40px;
-      font-size: 16px;
+      font-size: 14px;
       background-color: #ffffff;
       border: solid 1px #eeeeee;
       box-sizing: border-box;
@@ -823,6 +829,14 @@ input[type='text'], select {
       width: 200px;
       line-height: 40px;
       background: url('../images/select-icon.png') no-repeat 179px #fff;
+      padding: 0 14px;
+      color: #888888;
+      option{
+        color: #333333;
+        &:first-child{
+          color: #888888;
+        }
+      }
     }
   }
 }
@@ -835,7 +849,7 @@ input[type='text'], select {
   position: fixed;
   right: 40px;
   top: 30%;
-  // top: 10%;
+   //top: 10%;
   ul {
     li {
       position: relative;
@@ -1077,7 +1091,7 @@ input[type='text'], select {
   }
 }
 
-/* 预约弹窗 */
+/* 预约试听弹窗 */
 .appoint-popup{
   width: 560px;
 	height: 354px;
@@ -1114,6 +1128,15 @@ input[type='text'], select {
       border: solid 1px #bbbbbb;
       outline: none;
       margin-bottom: 12px;
+      padding: 0 16px;
+      color: #888888;
+      background: url("../images/select-icon.png") no-repeat 402px center;
+      option{
+        color: #000;
+        &:first-child{
+          color: #888888;
+        }
+      }
     }
     input {
       @extend %in-b;
