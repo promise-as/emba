@@ -142,7 +142,7 @@ input[type='text'] {
   float: left;
   width: 52px;
   height: 52px;
-  background: url("https://img.thea.cn/public/platform/thea/201907/hbj/EU-DBA/images/tel.png") no-repeat;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/tel.png") no-repeat;
   margin-right: 8px;
 }
 
@@ -189,11 +189,11 @@ input[type='text'] {
   position: absolute;
   right: 0;
   top: 15px;
-  background: url("../images/nav-menu-nor.png") no-repeat center;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/nav-menu-nor.png") no-repeat center;
 }
 
 .nav .nav-menu .dropdown-btn.sel {
-  background: url("../images/nav-menu-sel.png") no-repeat center;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/nav-menu-sel.png") no-repeat center;
 }
 
 .nav ul {
@@ -219,10 +219,10 @@ input[type='text'] {
 .banner {
   width: 100%;
   height: 450px;
-  background: url("../images/banner.png") no-repeat center;
   padding-top: 335px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-position: center;
 }
 
 .banner a {
@@ -367,7 +367,7 @@ input[type='text'] {
   width: 100%;
   padding-top: 80px;
   padding-bottom: 80px;
-  background: url("../images/bg_1.png") no-repeat center;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/bg_1.png") no-repeat center;
 }
 
 .difference .difference-title {
@@ -519,7 +519,7 @@ input[type='text'] {
 }
 
 .schools .schools-cont .cont-detail .detail-title {
-  background: url("../images/icon_5.png") no-repeat left;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/icon_5.png") no-repeat left;
   padding-left: 43px;
   font-size: 30px;
   line-height: 48px;
@@ -571,7 +571,7 @@ input[type='text'] {
   padding-left: 83px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: url("../images/icon_6.png") no-repeat 13px #f88531;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/icon_6.png") no-repeat 13px #f88531;
   border-top-left-radius: 24px;
   border-bottom-left-radius: 24px;
 }
@@ -646,7 +646,7 @@ input[type='text'] {
 }
 
 .degree .detail-item .item-text .text-title {
-  background: url("../images/icon_5.png") no-repeat left;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/icon_5.png") no-repeat left;
   padding-left: 43px;
   font-size: 30px;
   line-height: 48px;
@@ -698,7 +698,7 @@ input[type='text'] {
   padding-left: 67px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: url("../images/icon_6.png") no-repeat 13px #f88531;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/icon_6.png") no-repeat 13px #f88531;
   border-top-left-radius: 24px;
   border-bottom-left-radius: 24px;
 }
@@ -748,7 +748,7 @@ input[type='text'] {
   width: 260px;
   margin-right: 20px;
   line-height: 48px;
-  background: url("../images/select-icon.png") no-repeat 233px #fff;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/select-icon.png") no-repeat 233px #fff;
   padding: 0 16px;
   color: #888888;
 }
@@ -776,7 +776,7 @@ input[type='text'] {
 /* 报名 */
 .apply {
   width: 100%;
-  background: url("../images/apply-bg.png") no-repeat center;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/apply-bg.png") no-repeat center;
 }
 
 .apply .apply-btn {
@@ -843,7 +843,7 @@ input[type='text'] {
 .footer-ad {
   width: 100%;
   height: 120px;
-  background: url("../images/footer-ad.png") no-repeat center;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/footer-ad.png") no-repeat center;
   position: fixed;
   bottom: 0;
   z-index: 100;
@@ -855,7 +855,7 @@ input[type='text'] {
   float: right;
   width: 26px;
   height: 26px;
-  background: url("../images/close.png") no-repeat center;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/close.png") no-repeat center;
   margin-top: 4px;
   margin-right: -120px;
   cursor: pointer;
@@ -903,7 +903,7 @@ input[type='text'] {
 .footer-ad .sign-in select {
   width: 200px;
   line-height: 40px;
-  background: url("../images/select-icon.png") no-repeat 179px #fff;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/select-icon.png") no-repeat 179px #fff;
   padding: 0 14px;
   color: #888888;
 }
@@ -953,31 +953,31 @@ input[type='text'] {
 .right-nav ul li a .education {
   width: 32px;
   height: 30px;
-  background: url("../images/education-nor.png") no-repeat;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/education-nor.png") no-repeat;
 }
 
 .right-nav ul li a .enroll {
   width: 30px;
   height: 31px;
-  background: url("../images/enroll-nor.png") no-repeat;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/enroll-nor.png") no-repeat;
 }
 
 .right-nav ul li a .tuition {
   width: 30px;
   height: 30px;
-  background: url("../images/tuition-nor.png") no-repeat;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/tuition-nor.png") no-repeat;
 }
 
 .right-nav ul li a .audition {
   width: 30px;
   height: 30px;
-  background: url("../images/audition-nor.png") no-repeat;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/audition-nor.png") no-repeat;
 }
 
 .right-nav ul li a .consult {
   width: 30px;
   height: 31px;
-  background: url("../images/consult-nor.png") no-repeat;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/consult-nor.png") no-repeat;
 }
 
 .right-nav ul li a:hover {
@@ -987,23 +987,23 @@ input[type='text'] {
 }
 
 .right-nav ul li a:hover .education {
-  background: url("../images/education-sel.png") no-repeat;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/education-sel.png") no-repeat;
 }
 
 .right-nav ul li a:hover .enroll {
-  background: url("../images/enroll-sel.png") no-repeat;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/enroll-sel.png") no-repeat;
 }
 
 .right-nav ul li a:hover .tuition {
-  background: url("../images/tuition-sel.png") no-repeat;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/tuition-sel.png") no-repeat;
 }
 
 .right-nav ul li a:hover .audition {
-  background: url("../images/audition-sel.png") no-repeat;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/audition-sel.png") no-repeat;
 }
 
 .right-nav ul li a:hover .consult {
-  background: url("../images/consult-sel.png") no-repeat;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/consult-sel.png") no-repeat;
 }
 
 .right-nav ul li .hide-content {
@@ -1025,7 +1025,7 @@ input[type='text'] {
 .invite-popup {
   width: 540px;
   height: 480px;
-  background: url("../images/invite-popup.png") no-repeat top;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/invite-popup.png") no-repeat top;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: fixed;
@@ -1183,7 +1183,7 @@ input[type='text'] {
 .appoint-popup {
   width: 560px;
   height: 354px;
-  background: url("../images/appoint-popup.png") no-repeat top;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/appoint-popup.png") no-repeat top;
   padding: 114px 40px 16px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1224,7 +1224,7 @@ input[type='text'] {
   margin-bottom: 12px;
   padding: 0 16px;
   color: #888888;
-  background: url("../images/select-icon.png") no-repeat 402px center;
+  background: url("https://img.thea.cn/public/platform/thea/201908/hbj/emba/images/select-icon.png") no-repeat 402px center;
 }
 
 .appoint-popup .appoint-form select option {

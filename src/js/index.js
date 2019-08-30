@@ -57,11 +57,11 @@ $(function(){
 
   // 点击 免费试听 预约试听弹窗 显示
   $('.audition-btn').click(function () {
-    $('.appoint-popup').show()
+    $('.appoint-popup').show();
   });
 
   $('.close').click(function () {
-    $('.appoint-popup').hide()
+    $('.appoint-popup').hide();
   });
 
   // dataWrap: 数据容器, submitData: 提交的数据, mergeData: 合并数据
